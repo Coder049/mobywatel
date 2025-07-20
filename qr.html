@@ -330,4 +330,21 @@
                         <div data-range="61-80" class="segment"><span></span></div>
                         <div data-range="81-100" class="segment"><span></span></div>
                     </div>
+   <div class="error-modal" id="errorModal">
+    <div class="error-box">
+      <p style="font-size: 18px; margin-bottom: 10px;">❌ Błąd</p>
+      <p style="color: #555;">Nie udało się wykonać operacji</p>
+      <p style="color: #555; font-size: 14px;">Spróbuj ponownie później</p>
+      <button class="error-button" onclick="hideError()">OK</button>
+    </div>
+  </div>
+
+  <script>
+    function showError() {
+      document.getElementById('errorModal').style.display = 'flex';
+    }
+    function hideError() {
+      document.getElementById('errorModal').style.display = 'none';
+    }
+  </script>
                 </div></body></html>
