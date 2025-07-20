@@ -166,37 +166,7 @@
             align-items: center;
             left: 0;
         }
-   .error-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.7);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-    }
-    .error-box {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      width: 80%;
-      max-width: 300px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .error-button {
-      background: #317C26;
-      color: white;
-      border: none;
-      padding: 10px 25px;
-      margin-top: 20px;
-      border-radius: 25px;
-      font-weight: 500;
-      cursor: pointer;
-    }
+
         .BottomNav_bnTab__WzkWH {
             width: 25%;
             height: 100%;
@@ -265,27 +235,14 @@
     <h1 class="Qr_title__ifT94" style="font-weight: bold;">Kod QR</h1>
     <p style="margin-top: 2em; font-size: 1em; font-weight: bold;">Wybierz, co chcesz zrobić</p>
 
-   <div class="Qr_singleCard__iCjtA" onclick="showQrError()">
-    <div class="Qr_leftContent__hGZOH">
-        <img src="./qr_files/ai002_confirm_identity.svg" alt="ID" width="30" height="30">
-        <div class="Qr_textContainer__1_A2q">
-            <p class="Qr_mainText__7UW_9" style="font-weight: bold;">Zeskanuj kod QR</p>
-            <p class="Qr_secondaryText__BBj73">Zaloguj się lub potwierdź swoje dane.</p>
+    <div class="Qr_singleCard__iCjtA" onclick="window.location.href=&#39;qr.html&#39;">
+        <div class="Qr_leftContent__hGZOH">
+            <img src="./qr_files/ai002_confirm_identity.svg" alt="ID" width="30" height="30">
+            <div class="Qr_textContainer__1_A2q">
+                <p class="Qr_mainText__7UW_9" style="font-weight: bold;">Zeskanuj kod QR</p>
+                <p class="Qr_secondaryText__BBj73">Zaloguj się lub potwierdź swoje dane.</p>
+            </div>
         </div>
-    </div>
-    <img src="./qr_files/ic_arrow_forward_Dgray.svg" alt="arrow" width="17" height="17">
-</div>
-
-<div class="Qr_singleCard__iCjtA" onclick="showQrError()">
-    <div class="Qr_leftContent__hGZOH">
-        <img src="./qr_files/ai003_check_document.svg" alt="ID" width="30" height="30">
-        <div class="Qr_textContainer__1_A2q">
-            <p class="Qr_mainText__7UW_9" style="font-weight: bold;">Pokaż kod QR</p>
-            <p class="Qr_secondaryText__BBj73">Sprawdź dokument innej osoby.</p>
-        </div>
-    </div>
-    <img src="./qr_files/ic_arrow_forward_Dgray.svg" alt="arrow" width="17" height="17">
-</div>
         <img src="./qr_files/ic_arrow_forward_Dgray.svg" alt="arrow" width="17" height="17">
     </div>
 
@@ -343,21 +300,4 @@
                         <div data-range="61-80" class="segment"><span></span></div>
                         <div data-range="81-100" class="segment"><span></span></div>
                     </div>
-  <div class="error-overlay" id="qrErrorModal">
-  <div class="error-card">
-    <div class="error-title">Błąd systemu</div>
-    <p>Nie udało się wykonać operacji</p>
-    <p style="font-size: 0.9em; color: #666;">Spróbuj ponownie później</p>
-    <button class="error-button" onclick="hideQrError()">OK</button>
-  </div>
-</div>
-
-<script>
-  function showQrError() {
-    document.getElementById('qrErrorModal').style.display = 'flex';
-  }
-  function hideQrError() {
-    document.getElementById('qrErrorModal').style.display = 'none';
-  }
-</script>
                 </div></body></html>
